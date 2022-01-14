@@ -1,7 +1,29 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 function App() {
-	return <h1>Hello World!</h1>
+	const [value, setValue] = useState('/posts')
+	const [data, setData] = useState('')
+
+	useEffect(() => {
+		fetch(value)
+			.then((t) => t.text())
+			.then((data) => {
+				setData(data)
+			})
+	}, [value])
+
+	return (
+		<div>
+			<h1>Hello World!</h1>
+			<input
+				type="text"
+				placeholder="write the relative URL here to get data"
+				value={value}
+				onChange={(e) => setValue(e.target.value)}
+			/>
+			<pre>{data}</pre>
+		</div>
+	)
 }
 
 export default App
