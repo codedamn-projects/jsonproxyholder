@@ -5,7 +5,7 @@ function App() {
 	const [data, setData] = useState('')
 
 	useEffect(() => {
-		const API_URL = `https://${window.location.hostname}:1338/${value}`
+		const API_URL = `https://${window.location.hostname}:1338${value}`
 		fetch(API_URL)
 			.then((t) => t.text())
 			.then((data) => {
