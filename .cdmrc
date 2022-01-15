@@ -1,0 +1,7 @@
+tabs: ['README.md', 'client/src/App.jsx', 'server/server.js']
+terminal-one: |
+    cd client && yarn 
+    yarn dev
+terminal-two: |
+    cd server && yarn
+    yarn start
