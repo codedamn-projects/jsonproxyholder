@@ -1,4 +1,4 @@
-tabs: ['README.md', 'server/server.js']
+tabs: ['README.md', 'server/server.js', 'client/src/App.jsx']
 terminal-one: |
     cd client && yarn 
     yarn dev
