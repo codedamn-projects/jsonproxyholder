@@ -1,0 +1,23 @@
+const axios = require("axios");
+
+async function getPosts(req, res) {
+  try {
+    let id = req.params.id;
+    let userId = req.query.userId;
+    let url = "https://jsonplaceholder.typicode.com/posts";
+    if (id) {
+      url = `https://jsonplaceholder.typicode.com/posts/${id}`;
+    }
+    if (userId) {
+      url = `https://jsonplaceholder.typicode.com/posts?userId=${userId}`;
+    }
+
+    let data = await axios.get(url);
+    res.send(data.data);
+  } catch (error) {
+    console.log(error);
+  }
+}
+async function getSinglePost(req, res) {}
+
+module.exports = { getPosts, getSinglePost };
