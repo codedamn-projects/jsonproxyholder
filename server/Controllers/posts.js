@@ -18,6 +18,5 @@ async function getPosts(req, res) {
     console.log(error);
   }
 }
-async function getSinglePost(req, res) {}
 
 module.exports = { getPosts, getSinglePost };
