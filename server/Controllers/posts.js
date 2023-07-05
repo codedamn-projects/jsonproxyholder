@@ -13,7 +13,7 @@ async function getPosts(req, res) {
     }
 
     let data = await axios.get(url);
-    res.send(data.data);
+    res.header({ "x-codedamn-project": "jsonproxyholder" }).send(data.data);
   } catch (error) {
     console.log(error);
   }
