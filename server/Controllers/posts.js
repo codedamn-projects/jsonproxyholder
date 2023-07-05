@@ -19,4 +19,4 @@ async function getPosts(req, res) {
   }
 }
 
-module.exports = { getPosts, getSinglePost };
+module.exports = { getPosts };
